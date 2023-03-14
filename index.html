@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradiweb</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <script src="/js/main.js" defer></script>
+    <script src="/js/setCarrouselElements.js" defer></script>
+    <script src="/js/carrousel.js" defer></script>
+</head>
+<body>
+    <div style="display: none;" class="stars">
+        <input type="radio" disabled focusable="false" aria-hidden="false" id="star1" name="rating" value="1" /><input type="radio" disabled focusable="false" aria-hidden="false" checked id="star2" name="rating" value="2" /><input type="radio" disabled focusable="false" aria-hidden="false" id="star3" name="rating" value="3" /><input type="radio" disabled focusable="false" aria-hidden="false" id="star4" name="rating" value="4" /><input type="radio" disabled focusable="false" aria-hidden="false" id="star5" name="rating" value="5" />
+        
+        <label for="star1" aria-label="Banana">1 star</label><label for="star2">2 stars</label><label for="star3" class="current">3 stars</label><label for="star4">4 stars</label><label for="star5">5 stars</label>
+    </div>
+    <div class="main-container">
+        <div id="top" class="top-info">
+            Gratis verzending vanaf &euro;30
+        </div>
+
+        <div class="main-banner">
+            <header>
+                <div class="nav">
+                    <div class="hamburguer-menu">
+                        <img src="/assets/icons/hamburguer-menu-closed.png" alt="Menu">
+                    </div>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#">Brauzz Shop</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">Extra Brauzz Shop</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Extra Brauzz Shop 2</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Ontdekken</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">Extra Ontdekken</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Over Brauzz</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="logo">
+                    <div class="image">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="39" height="48" viewBox="0 0 39 48" fill="none">
+                            <path d="M16.443 47.4999C7.64949 47.4999 0.5 40.3885 0.5 31.6543C0.5 22.927 7.64936 15.8154 16.443 15.8154C25.2364 15.8154 32.3859 22.9269 32.3859 31.661C32.3859 40.3883 25.2366 47.4999 16.443 47.4999ZM16.443 17.2551C8.45943 17.2551 1.96099 23.7108 1.96099 31.6543C1.96099 39.5977 8.45943 46.0535 16.443 46.0535C24.4265 46.0535 30.9249 39.5977 30.9249 31.6543C30.9249 23.7177 24.4267 17.2551 16.443 17.2551Z" fill="white" stroke="white"/>
+                            <path d="M31.2174 37.9987C27.6935 37.9987 24.832 35.1499 24.832 31.6541C24.832 28.1584 27.6935 25.3096 31.2174 25.3096C34.741 25.3096 37.6025 28.1582 37.6027 31.6537C37.5961 35.1504 34.7337 37.9987 31.2174 37.9987ZM31.2174 26.2545C28.224 26.2545 25.7817 28.678 25.7817 31.6609C25.7817 34.6433 28.2167 37.0673 31.2174 37.0673C34.2112 37.0673 36.6461 34.6501 36.6461 31.6609C36.6461 28.6713 34.2039 26.2545 31.2174 26.2545Z" fill="white" stroke="white"/>
+                            <path d="M21.9512 43.5491C16.2821 43.5491 11.6665 38.9404 11.6665 33.2808V6.77001C11.6665 4.10615 9.49063 1.93964 6.81033 1.93964C4.13787 1.93964 1.95417 4.09836 1.95417 6.77001V31.1544H0.5V6.77001C0.5 3.31494 3.32742 0.5 6.81033 0.5C10.2932 0.5 13.1207 3.31494 13.1207 6.77001V33.2808C13.1207 38.145 17.0805 42.1027 21.9444 42.1027C25.7627 42.1027 29.1522 39.6596 30.3586 36.0925L31.7683 36.475C30.3927 40.6664 26.4268 43.5491 21.9512 43.5491Z" fill="white" stroke="white"/>
+                        </svg>
+                    </div>
+                    <div class="text">
+
+                    </div>
+                </div>
+                <div class="links">
+                    <ul class="lang">
+                        <li>En</li>
+                    </ul>
+                    <a href="#" class="profile">
+                        <img src="/assets/icons/profile.png" alt="Profile">
+                    </a>
+                    <a href="#" class="cart">
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="25" height="31" viewBox="0 0 25 31"><path d="M5.32343 9.39536L5.32343 9.39505V8.83168H3.28959C2.97033 8.83168 2.71517 9.0963 2.72675 9.4146L2.72675 9.41473L3.2641 24.4578H21.5201L22.0574 9.4149C22.0574 9.41484 22.0574 9.41478 22.0574 9.41473M5.32343 9.39536L21.4946 8.63168C21.9269 8.63168 22.2723 8.99014 22.2573 9.42187L22.0574 9.41473M5.32343 9.39536C5.32425 9.92677 5.75502 10.3578 6.28679 10.3578C6.81828 10.3578 7.25016 9.92698 7.25016 9.39505V8.83168M5.32343 9.39536L7.25016 8.83168M22.0574 9.41473C22.0684 9.09599 21.8135 8.83168 21.4946 8.83168H19.4607M22.0574 9.41473L19.4607 8.83168M19.4607 8.83168V9.39505C19.4607 9.92687 19.0296 10.3578 18.4974 10.3578C17.9656 10.3578 17.5346 9.92676 17.5346 9.39505V8.83168H7.25016M19.4607 8.83168H7.25016M21.4467 26.3838C21.3448 27.4481 20.4492 28.2733 19.3667 28.2733H5.41615C4.33367 28.2733 3.438 27.4481 3.33614 26.3838H21.4467ZM0.801584 9.48388L0.801587 9.48395L1.40338 26.3277C1.48049 28.4886 3.25455 30.2 5.41681 30.2H19.3673C21.5296 30.2 23.3037 28.4879 23.3808 26.3277L23.9826 9.48398C23.9826 9.48397 23.9826 9.48396 23.9826 9.48395C24.0331 8.07558 22.9043 6.90561 21.4946 6.90561H19.3957C18.9253 3.45739 15.9691 0.8 12.3917 0.8C8.81505 0.8 5.8588 3.45741 5.38849 6.90561H3.28959C1.87981 6.90561 0.7518 8.07498 0.801584 9.48388ZM7.33971 6.90561C7.79044 4.52599 9.88127 2.72673 12.3917 2.72673C14.9028 2.72673 16.9931 4.52597 17.4438 6.90561H7.33971Z" fill="white" stroke="white" stroke-width="0.4"/></svg> -->
+                        <img src="/assets/icons/bag-small.png" alt="Bag">
+                        <div class="total-items">
+                            0
+                        </div>
+                    </a>
+                </div>
+            </header>
+            <div class="banner-info">
+                <div class="banner">
+                    <img src="/assets/images/Group 1916.png" alt="Cleaners">
+                </div>
+                <div class="text">
+                    <div class="main">
+                        Schoonmaken, maar <span class="total">1000</span> dan écht clean
+                    </div>
+                    <div class="secondary">Join de schoonmaak(r)evolutie! </div>
+                    <div class="btn-secondary btn go">
+                        SHOP NU
+                    </div>
+                    <div class="info">
+                        Meer dan 40.000 klanten
+                    </div>
+                    <div class="reviews" style="font-family: 'Filson Pro';">
+                        <a href="#">+2.100 reviews</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <main>
+            
+            <div class="title">
+                <!-- <div class="txt"> -->
+                    
+                <!-- </div> -->
+                Discover our <br>
+                planet-friendly offer
+            </div>
+            <div class="carrousel" >
+                
+                <section class="slider-wrapper">
+                    <div class="buttons">
+                        <button class="slide-arrow" id="slide-arrow-prev">
+                          &#8249;
+                        </button>
+                        
+                        <button class="slide-arrow" id="slide-arrow-next">
+                          &#8250;
+                        </button>
+                    </div>
+                    <!-- <div class="products" id="products-carousel"> -->
+
+                    <!-- </div> -->
+                    <ul class="slides-container products" id="slides-container">
+                    </ul>
+                </section>
+            </div>
+            <div class="browse-btn">
+                <a href="#" class="btn btn-secondary">
+                    Browse all products
+                </a>
+            </div>
+            <div id="join-newsletter">
+                <div class="top">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="550" viewBox="0 0 1440 550" fill="none">
+                        <path d="M1046.79 84.2501C839.09 84.2501 839.09 0 631.427 0C423.794 0 423.794 84.2501 216.13 84.2501C106.685 84.2501 54.8932 60.8592 6.33815e-05 38.7124V550H1440V0.355453C1254.23 6.11432 1246.79 84.2501 1046.79 84.2501Z" fill="#CAF0FF"/>
+                    </svg>
+                </div>
+                <div class="content">
+                    <div class="float-pill nl-pill1">
+                        <img src="/assets/images/pastilla2 1.png" alt="Pill">
+                    </div>
+                    <div class="float-pill nl-pill2">
+                        <img src="/assets/images/pastilla3 1.png" alt="Pill">
+                    </div>
+                    <div class="float-pill nl-pill3">
+                        <img src="/assets/images/pastilla6 1.png" alt="Pill">
+                    </div>
+                    <div class="float-pill nl-pill4">
+                        <img src="/assets/images/pastillaverde 1.png" alt="Pill">
+                    </div>
+                    <div class="float-pill nl-pill5">
+                        <img src="/assets/images/pastlla4 1.png" alt="Pill">
+                    </div>
+                    <div class="inner-content">
+                        <label for="newsletter-email">
+                            <div class="newsletter-title">
+                                Join the green revolution without commitment
+                            </div>
+                            <div class="text">
+                                If you are missing something and don't want to miss future promotions or our future products
+                            </div>
+                        </label>
+                        <form action="#" method="post" class="form-control">
+                            <div class="input-group">
+                                <input type="email" name="email" placeholder="Your Email" id="newsletter-email">
+                            </div>
+                            <div class="input-group">
+                                <input type="submit" value="SEND" class="btn-secondary">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="logo">
+                <div class="image">
+                    <!-- <img src="/assets/icons/brauzz-logo.png" alt=""> -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="171" height="48" viewBox="0 0 171 48" fill="none">
+                        <path d="M16.3243 47.6545C7.32295 47.6545 0 40.3749 0 31.4268C0 22.4854 7.32295 15.2058 16.3243 15.2058C25.3258 15.2058 32.6487 22.4854 32.6487 31.4335C32.6487 40.3749 25.3258 47.6545 16.3243 47.6545ZM16.3243 17.6279C8.66977 17.6279 2.44324 23.8175 2.44324 31.4268C2.44324 39.036 8.66977 45.2257 16.3243 45.2257C23.9789 45.2257 30.2055 39.036 30.2055 31.4268C30.2055 23.8243 23.9789 17.6279 16.3243 17.6279Z" fill="white"/>
+                        <path d="M30.9919 38.2222C27.2221 38.2222 24.1562 35.1745 24.1562 31.427C24.1562 27.6796 27.2221 24.6318 30.9919 24.6318C34.7617 24.6318 37.8276 27.6796 37.8276 31.427C37.8208 35.1745 34.7549 38.2222 30.9919 38.2222ZM30.9919 26.5627C28.2915 26.5627 26.0919 28.7493 26.0919 31.4337C26.0919 34.1182 28.2847 36.3047 30.9919 36.3047C33.6923 36.3047 35.8851 34.1249 35.8851 31.4337C35.8851 28.7426 33.6856 26.5627 30.9919 26.5627Z" fill="white"/>
+                        <path d="M21.7929 43.7323C15.8912 43.7323 11.0859 38.9353 11.0859 33.0417V6.72215C11.0859 4.35393 9.1503 2.42302 6.7612 2.42302C4.37888 2.42302 2.43647 4.3472 2.43647 6.72215V31.427H0V6.72215C0 3.01508 3.03205 0.000976562 6.7612 0.000976562C10.4904 0.000976562 13.5224 3.01508 13.5224 6.72215V33.0417C13.5224 37.5965 17.2313 41.3036 21.7861 41.3036C25.522 41.3036 28.818 38.8075 29.8062 35.2283L32.1614 35.8674C30.889 40.5029 26.6252 43.7323 21.7929 43.7323Z" fill="white"/>
+                        <path d="M65.2556 35.4971C65.2556 38.4103 62.8124 40.321 59.1848 40.321H52.7484C52.1529 40.321 51.8145 39.9846 51.8145 39.3926V23.185C51.8145 22.593 52.1529 22.2566 52.7484 22.2566H58.3591C61.8378 22.2566 64.4029 24.0126 64.4029 26.9258C64.4029 28.7827 63.3403 30.4579 60.9783 31.0567C63.8276 31.3662 65.2556 33.2769 65.2556 35.4971ZM54.5555 24.5037V30.209H57.31C60.403 30.209 61.5671 28.6885 61.5671 27.1343C61.5671 25.4053 60.0646 24.5037 58.3252 24.5037H54.5555ZM62.4469 35.3895C62.4469 33.7882 61.1001 32.2677 57.8786 32.2677H54.5555V38.0739H59.1509C61.073 38.0739 62.4469 37.0176 62.4469 35.3895Z" fill="white"/>
+                        <path d="M77.1688 33.5323H73.5885V39.3923C73.5885 39.9844 73.2501 40.3208 72.6546 40.3208H71.768C71.1724 40.3208 70.834 39.9844 70.834 39.3923V23.1848C70.834 22.5927 71.1724 22.2563 71.768 22.2563H78.4886C81.9944 22.2563 84.018 24.887 84.018 27.9616C84.018 30.646 82.4614 32.8864 79.7609 33.4045C79.9437 35.3623 81.1619 38.3091 83.1314 38.3091C83.6525 38.3091 84.0924 38.2082 84.4579 37.9996C85.0264 37.744 85.419 37.7911 85.7032 38.336L85.8318 38.5715C86.0687 39.0896 86.0416 39.5538 85.5476 39.8633C84.7692 40.3813 83.8623 40.6101 82.9283 40.6101C78.6442 40.6033 77.3515 35.6987 77.1688 33.5323ZM77.9471 31.3659C79.9437 31.3659 81.1619 29.9463 81.1619 27.9616C81.1619 25.9231 79.9166 24.5035 77.9471 24.5035H73.5885V31.3659H77.9471Z" fill="white"/>
+                        <path d="M88.8963 39.2382L95.1499 23.0105C95.3326 22.5193 95.7184 22.2637 96.2395 22.2637H97.742C98.2902 22.2637 98.6489 22.5193 98.8316 23.0105L105.139 39.2382C105.376 39.884 105.112 40.3214 104.415 40.3214H103.583C103.035 40.3214 102.676 40.0859 102.466 39.5746L101.349 36.6345H92.6795L91.5628 39.5746C91.353 40.0926 91.0146 40.3214 90.4732 40.3214H89.6137C88.9233 40.3214 88.6391 39.884 88.8963 39.2382ZM100.578 34.4075L96.9975 24.9145L93.4714 34.4075H100.578Z" fill="white"/>
+                        <path d="M109.633 33.613V23.1848C109.633 22.5927 109.998 22.2563 110.567 22.2563H111.447C112.042 22.2563 112.381 22.5927 112.381 23.1848V33.6063C112.381 36.6473 114.458 38.1477 116.847 38.1477C119.264 38.1477 121.341 36.6473 121.341 33.6063V23.1848C121.341 22.5927 121.68 22.2563 122.275 22.2563H123.135C123.73 22.2563 124.096 22.5927 124.096 23.1848V33.6063C124.096 38.2015 120.773 40.5966 116.854 40.5966C112.956 40.6033 109.633 38.2015 109.633 33.613Z" fill="white"/>
+                        <path d="M129.025 39.3923V38.9281C129.025 38.4908 129.154 38.1275 129.438 37.7911L139.949 24.5035H130.656C130.061 24.5035 129.722 24.1671 129.722 23.575V23.1848C129.722 22.5927 130.061 22.2563 130.656 22.2563H142.649C143.245 22.2563 143.61 22.5927 143.61 23.1848V23.649C143.61 24.0863 143.482 24.4496 143.198 24.786L132.579 38.0736H143.245C143.84 38.0736 144.206 38.41 144.206 39.0021V39.3856C144.206 39.9776 143.84 40.314 143.245 40.314H129.98C129.384 40.3208 129.025 39.9844 129.025 39.3923Z" fill="white"/>
+                        <path d="M147.709 39.3923V38.9281C147.709 38.4908 147.838 38.1275 148.122 37.7911L158.632 24.5035H149.34C148.744 24.5035 148.406 24.1671 148.406 23.575V23.1848C148.406 22.5927 148.744 22.2563 149.34 22.2563H161.333C161.928 22.2563 162.294 22.5927 162.294 23.1848V23.649C162.294 24.0863 162.165 24.4496 161.881 24.786L151.262 38.0736H161.928C162.524 38.0736 162.89 38.41 162.89 39.0021V39.3856C162.89 39.9776 162.524 40.314 161.928 40.314H148.663C148.074 40.3208 147.709 39.9844 147.709 39.3923Z" fill="white"/>
+                        <path d="M167.074 38.6932C167.074 37.61 167.927 36.7354 169.023 36.7354C170.113 36.7354 171 37.61 171 38.6932C171 39.7495 170.113 40.6039 169.023 40.6039C167.927 40.6039 167.074 39.7495 167.074 38.6932Z" fill="white"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column">
+                    <div class="title">
+                        Our Produits 
+                    </div>
+                    <div class="items">
+                        <a href="#" class="item">Cleaners</a>
+                        <a href="#" class="item">Detergent</a>
+                        <a href="#" class="item">Dishwasher</a>
+                        <a href="#" class="item">Accesories</a>
+                    </div>
+                </div>
+                
+                <div class="column">
+                    <div class="title">
+                        Discover 
+                    </div>
+                    <div class="items">
+                        <a href="#" class="item">Blog</a>
+                        <a href="#" class="item">FAQ</a>
+                        <a href="#" class="item">Contact</a>
+                        <a href="#" class="item">Jobs</a>
+                    </div>
+                </div>
+                
+                <div class="column">
+                    <div class="title">
+                        Legal
+                    </div>
+                    <div class="items">
+                        <a href="#" class="item">Privacy</a>
+                        <a href="#" class="item">Refund Policy</a>
+                        <a href="#" class="item">General terms and conditions</a>
+                        <div class="item text-normal">About us</div>
+                    </div>
+                </div>
+                
+                <div class="column contact">
+                    <div class="title contact-title" >
+                        Contact
+                    </div>
+                    <div class="items contact-items">
+                        <div class="social">
+                            <a href="#" class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="18" viewBox="0 0 15 18" fill="none">
+                                    <path d="M6.22789 17.3333C5.95543 17.3333 5.68296 17.3333 5.40672 17.3333C5.36509 17.3216 5.32346 17.3138 5.28184 17.3021C4.88828 17.2161 4.47959 17.1692 4.10117 17.0403C1.45601 16.1181 -0.0538914 13.4689 0.419134 10.6204C0.858102 7.98678 3.20809 5.96273 5.79649 5.98617C6.09166 5.99008 6.30736 6.18155 6.30736 6.48632C6.31492 7.39285 6.31492 8.30328 6.30736 9.2098C6.30357 9.51458 6.09923 9.70214 5.80027 9.71776C5.70945 9.72167 5.61485 9.73339 5.52403 9.74512C4.49472 9.90141 3.77572 10.9408 3.96872 12.0075C4.15793 13.0664 5.17966 13.7815 6.18626 13.5588C7.0869 13.3595 7.69238 12.5819 7.69616 11.6129C7.69616 7.96333 7.69994 4.3138 7.69238 0.664262C7.69238 0.351668 7.7832 0.132852 8.05944 0C9.02063 0 9.98182 0 10.943 0C11.2079 0.117223 11.3101 0.324316 11.3214 0.625188C11.3328 0.91043 11.3782 1.19958 11.4577 1.4731C11.855 2.83679 13.013 3.7394 14.4169 3.80583C14.8294 3.82537 14.9997 4.00902 14.9997 4.42711C14.9997 5.27502 14.9997 6.11903 14.9997 6.96694C14.9997 7.34596 14.7953 7.55305 14.4283 7.54524C13.3876 7.5257 12.3961 7.28735 11.4614 6.80283C11.416 6.77938 11.3706 6.75984 11.3101 6.72858C11.3101 6.82627 11.3101 6.8927 11.3101 6.96303C11.3101 8.56898 11.3252 10.1788 11.3025 11.7848C11.2722 14.2816 9.59583 16.4815 7.26098 17.1262C6.92797 17.22 6.57604 17.2669 6.22789 17.3333Z" fill="white"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                            </a>
+                        </div>
+                        <a href="#" class="item"> </a>
+                        <div href="#" class="item text-normal">
+                            BRAUZZ. BV // Over de Beek 55, 1840 Londerzeel // VAT: BE 0747.951.855
+                        </div>
+                        <div class="item alliances">
+                            <div class="logo"><img src="/assets/images/bancontact.png" alt="bancontact"></div>
+                            <div class="logo"><img src="/assets/images/mastercard.png" alt="mastercard"></div>
+                            <div class="logo"><img src="/assets/images/visa.png" alt="visa"></div>
+                            <div class="logo"><img src="/assets/images/paypal.png" alt="paypal"></div>
+                            <div class="logo"><img src="/assets/images/master.png" alt="master"></div>
+                            <div class="logo"><img src="/assets/images/sofort.png" alt="sofort"></div>
+                            <div class="logo"><img src="/assets/images/iDeal.png" alt="iDeal"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="copyright">
+                &copy; <span class="year"></span> All rights reserved
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

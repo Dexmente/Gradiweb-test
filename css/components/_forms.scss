@@ -1,0 +1,49 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+form {
+    font-size: 1em;
+    label {
+        color: $font-color-main;
+        font-family: $font-family-main;
+        font-size: 1em;
+        font-size: calc(1em + 1px);
+    }
+    input, textarea, select {
+        padding: .5em 1em;
+        font-size: 1em;
+        // font-size: calc(1em - 1px);
+        border: 1px solid #ccc;
+        border-radius: 3em;
+        color: $font-color-main;
+        font-weight: 500;
+
+        &:focus {
+            // outline: 1px solid $color-focused;
+            outline: 0;
+            border-color: $color-focused !important;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+        &:placeholder-shown, 
+        &::placeholder {
+            color: $font-color-secondary;
+        }
+    }
+
+    &.form-control {
+
+        .input-group {
+            width: 100%;
+            margin: 1em auto;
+
+            input[type="email"],
+            input[type="text"],
+            input[type="number"],
+            textarea,
+            select {
+                width: 100%;
+            }
+        }
+    }
+}

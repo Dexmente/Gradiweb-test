@@ -1,0 +1,241 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+main {
+    font-size: 1em;
+    margin-top: 3em;
+    position: relative;
+
+    .title {
+        font-family: $font-family-secondary;
+        font-size: calc(2em - 2px);
+        font-weight: 700;
+        position: absolute;
+        margin-left: 20%;
+        @include for_breakpoint(mobile tablet) {
+            margin: 1em $padding-body 1em;
+            position: relative;
+        }
+
+        &::before {
+            position: absolute;
+            width: 70px;
+            height: 24px;
+            content: ' ';
+            z-index: -1;
+            top: .7em;
+            left: -1em;
+            background: $color-primary-faded;
+            border-radius: 100px;
+
+            @include for_breakpoint(mobile tablet) {
+                left: .1em;
+                top: .5em;
+            }
+
+        } 
+    }
+    .carrousel {
+        margin: 0 0 1em $padding-body;
+        min-height: 5em;
+        text-align: left;
+        padding-top: 2em;
+        @include for_breakpoint(mobile tablet) {
+            padding-top: 0;
+        }
+
+
+        #slides-container {
+            display: flex;
+            overflow-x: auto;
+            margin-bottom: 1em;
+
+            .product {
+                margin-right: 1em;
+                min-width: 13em;
+                
+                .image{
+                    position: relative;
+
+                    .discount {
+                        position: absolute;
+                        background-color: $color-fifth;
+                        color: $font-color-main;
+                        padding: .8em .5em;
+                        border-radius: 2em;
+                        font-weight: 700;
+                        font-family: $font-family-third;
+                        font-size: .95em;
+                        font-size: calc(1em - 1px);
+                        line-height: .5em;
+                        top: 1em;
+                        right: 1em;
+
+                        &:empty {
+                            display: none;
+                        }
+                    }
+                    .bg {
+                        border-radius: 1em;
+                        background-color: $color-forth;
+                        min-height: 18em;
+                    }
+
+                    .btn {
+                        position: absolute;
+                        bottom: 1em;
+                        width: 80%;
+                        width: calc(100% - 2em);
+                        left: 1em;
+                    }
+
+                } 
+                .rating-price {
+                    display: flex;
+                    justify-content: space-between;
+                    @include for_breakpoint(mobile tablet) {
+                        display: block;
+                    }
+
+                    .rating {
+                        display: flex;
+
+                        .rate {
+                            color: $font-color-secondary;
+                        }
+                    }
+                    .price {
+                        .max {
+                            color: $font-color-secondary;
+                            margin-right: .7em;
+                            text-decoration: line-through;
+                            font-weight: normal;
+                        }
+                        .min {
+                            font-weight: 500;
+                        }
+                    }
+
+                }
+                .name {
+                    min-height: 3em;
+                    margin-top: .5em;
+                    font-weight: 500;
+                    font-size: 1.2em;
+                }
+            }
+        }
+    }
+    .browse-btn {
+        text-align: center;
+        margin: 2em auto 6em;
+        @include for_breakpoint(mobile tablet) {
+            margin: 1em auto 3em;
+        }
+    }
+    #join-newsletter {
+        text-align: center;
+
+        .top {
+            overflow: hidden;
+            max-height: 200px;
+
+            svg {
+                width: 100%;
+            }
+
+            @include for_breakpoint(mobile tablet) {
+                overflow: hidden;
+                max-height: 150px;
+                svg {
+                    width: 200%;
+                }
+            }
+
+        }
+        
+        .content {
+            background-color: $color-primary-faded;
+            padding: 0 $padding-body 2em;
+            position: relative;
+            z-index: 1;
+
+            .float-pill {
+                position: absolute;
+                z-index: -1;
+                
+                @include for_breakpoint(mobile tablet) {
+                    font-size: .8em;
+                }
+            }
+            .nl-pill {
+                &1 {
+                    left: 10%;
+                    top: 2em;
+                    width: 5em;
+                }
+                &2 {
+                    right: 20%;
+                    top: 30%;
+                    width: 2.5em;
+                }
+                
+                &3 {
+                    right: 7%;
+                    top: 0em;
+                    width: 5em;
+                }
+                &4 {
+                    left: 17%;
+                    top: -1em;
+                    width: 2.5em;
+                }
+                
+                &5 {
+                    left: 37%;
+                    top: -3em;
+                    width: 2.5em;
+                }
+            }
+
+            .inner-content {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .newsletter-title {
+                color: $font-color-main;
+                font-size: calc(2em - 2px);
+                font-family: $font-family-secondary;
+                font-weight: bold;
+    
+            }
+            .text {
+                font-weight: 100;
+                color: $font-color-secondary;
+                margin: 1em auto;
+            }
+            form.form-control {
+                display: flex;
+
+                @include for_breakpoint(mobile tablet) {
+                    display: block;
+                }
+                .input-group {
+                    width: unset;
+                    margin: auto;
+                    
+                    @include for_breakpoint(mobile tablet) {
+                        width: 100%;
+                        margin: 1em auto;
+                    }
+                }
+            }
+            input {
+                &[type="email"] {
+                    border-color: $color-secondary;
+                }
+            }
+        }
+    }
+}

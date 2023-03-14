@@ -1,0 +1,129 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+footer {
+    color: $font-color-highlight;
+    background-color: $color-primary;
+    padding: 1em $padding-body 2em;
+
+    .logo {
+        margin: 1em auto;
+        width: 170px;
+    }
+
+    .columns {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        @include for_breakpoint(mobile tablet) {
+            display: block;
+        }
+        .column {
+
+            .title {
+                margin-top: 1.1em;
+                margin-bottom: .8em;
+                font-weight: 500;
+                font-size: 1.1em;
+                font-size: calc(1em + 2px);
+                position: relative;
+                padding-bottom: 4px;
+                
+                position: relative;
+                
+                @include for_breakpoint(mobile tablet) {
+                    &:not(.contact-title) {
+                        border-bottom: 1px solid currentColor;
+                        cursor: pointer;
+                        &::after {
+                            content: " ";
+                            display: block;
+                            box-sizing: border-box;
+                            position: absolute;
+                            width: 10px;
+                            height: 10px;
+                            border-bottom: 2px solid;
+                            border-right: 2px solid;
+                            transform: rotate(45deg);
+                            right: .5em;
+                            top: 5px;
+                            border-radius: 2px;
+                        }
+        
+                        &.open {
+        
+                            &::after {
+                                transform: rotate(225deg);
+                                top: 10px;
+        
+                            }
+                            &~.items {
+                                display: block;
+                            }
+                            
+                        }
+                    }
+                }
+            }
+
+            .items {
+                @include for_breakpoint(mobile tablet) {
+                    &:not(.contact-items) {
+                        display: none;
+                    }
+                }
+            }
+
+            .item {
+                margin: 1.3em auto;
+                display: block;
+                font-weight: 350;
+                font-size: 1em;
+            }
+            .social {
+                display: flex;
+                margin-bottom: 3em;
+                .icon {
+                    margin-right: 1em;
+                    width: 32px;
+                    height: 32px;
+                    padding: .4em;
+                    border-radius: 5em;
+                    border: 1px solid currentColor;
+                    @include flex-center;
+
+                }
+            }
+            .contact-items {
+
+                .alliances {
+                    
+                    margin-top: 3em;
+
+                    @include for_breakpoint (mobile tablet) {
+                        margin-top: 1em;
+                    }
+                    display: grid;
+                    max-width: 100%;
+                    $width: 3em;
+                    grid-template-columns: $width $width $width $width $width;
+                    grid-column-gap: .5em;
+                    grid-row-gap: .5em;
+
+                    .logo {
+                        width: 100%;
+                        margin: auto;
+                    }
+                }
+
+            }
+        }
+
+    }
+    #copyright {
+        margin-top: 3em;
+        text-align: center;
+        font-size: 1em;
+        font-weight: 350;
+    }
+}

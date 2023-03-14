@@ -1,0 +1,255 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+@import "../abstracts/media-queries";
+
+#top.top-info {
+    text-transform: uppercase;
+    text-align: center;
+    padding: .5em;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 140%;
+    background-color: $color-secondary-faded;
+
+    @include for_breakpoint('desktop') {
+        font-size: 13px;
+    }
+}
+
+.main-banner {
+    font-size: 1em;
+    margin: .5em $padding-body;
+    border-radius: 1.25em;
+    padding: 1.5em 8%;
+    background: linear-gradient(90deg, rgba(11, 255, 240, 0.2) 2.33%, rgba(98, 207, 250, 0) 48.19%), linear-gradient(180deg, rgba(83, 255, 183, 0.2) 0%, rgba(44, 212, 235, 0) 100%), linear-gradient(121.62deg, #8CD0D5 30.95%, rgba(154, 221, 221, 0.4375) 74.24%, #C6FCFF 107.91%);
+    position: relative;
+    color: $font-color-highlight;
+    z-index: 1;
+    overflow: hidden;
+
+    &::before {
+        position: absolute;
+        width: 400%;
+        height: 50%;
+        bottom: 26px;
+        content: ' ';
+        left: 0;
+        z-index: -1;
+        opacity: .5;    
+        transform: rotate(350deg);
+        background: linear-gradient(111.59deg, rgba(101, 202, 210, 0.45) 49.96%, rgba(217, 217, 217, 0) 81.5%);
+    }
+    
+    
+    @include for_breakpoint (mobile tablet) {
+        padding: 1.5em;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+
+        &>div {
+            @include flex-center;
+        }
+
+        .nav {
+            
+            .hamburguer-menu {
+                display: none;
+                @include for_breakpoint(mobile tablet) {
+                    display: block;
+                }
+            }
+
+            nav {
+                display: block;
+                font-family: $font-family-secondary;
+                font-weight: 700;
+                text-transform: uppercase;
+                @include for_breakpoint(mobile tablet) {
+                    display: none;
+                }
+                >ul {
+                    display: flex;
+                    
+                    li {
+                        position: relative;
+                        margin-right: 1em;
+                        padding: .5em 0;
+
+                        &:has(ul) {
+
+                            &::after {
+                                margin-left: 1em;
+                                margin-right: 1.3em;
+                                content: " ";
+                                display: inline-block;
+                                box-sizing: border-box;
+                                width: 10px;
+                                height: 10px;
+                                border-bottom: 2px solid;
+                                border-right: 2px solid;
+                                transform: rotate(45deg);
+                                border-radius: 2px;
+                            }
+                        }
+
+                        ul {
+                            position: absolute;
+                            display: none;
+                        }
+                        
+                        &:hover {
+                            ul {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .logo {
+            margin: 0 .5em;
+        }
+        .lang {
+            text-transform: uppercase;
+
+            @include for_breakpoint (mobile tablet) {
+                display: none;
+            }
+            li {
+                &::after {
+                    margin-left: 1em;
+                    margin-right: 1.3em;
+                    content: " ";
+                    display: inline-block;
+                    box-sizing: border-box;
+                    width: 10px;
+                    height: 10px;
+                    border-bottom: 2px solid;
+                    border-right: 2px solid;
+                    transform: rotate(45deg);
+                    border-radius: 2px;
+                }
+            }
+        }
+        .profile {
+            margin-right: 2em;
+            margin-left: 1em;
+            
+            @include for_breakpoint (mobile tablet) {
+                display: none;
+            }
+        }
+        .cart {
+            position: relative;
+            $width-bubble: 18px;
+            margin-right: $width-bubble;;
+            .total-items {
+                position: absolute;
+                @include flex-center;
+                font-family: $font-family-secondary;
+                font-weight: 700;
+                font-size: 10px;
+                background-color: $color-secondary;
+                width: $width-bubble;
+                height: $width-bubble;
+                border-radius: 5em;
+                top: 0;
+                right: -$width-bubble;
+            }
+        }
+    }
+
+    .banner-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row-reverse;
+        width: 90%;
+        margin-left: auto;
+
+        
+        @include for_breakpoint(mobile tablet) {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .banner {
+            flex: 1;
+            @include for_breakpoint(mobile tablet) {
+                flex: unset;
+                margin-top: 3em;
+            }
+        }
+        .text {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            flex: 1;
+
+            @include for_breakpoint(mobile tablet) {
+                flex: unset;
+                align-items: center;
+            }
+
+            .main {
+                font-family: $font-family-secondary;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 124%;
+                font-size: 55px;
+                text-align: left;
+                
+                @include for_breakpoint(mobile tablet) {
+                    text-align: center;
+                    font-size: 2.2em;
+                }
+            }
+            .secondary {
+                
+                text-align: left;
+                line-height: 128%;
+                margin: 1em auto 1em;
+                margin-left: 0;
+                font-size: 18px;
+                
+                @include for_breakpoint(mobile tablet) {
+                    margin-left: auto;
+                    text-align: center;
+                    font-size: 2.2em;
+                }
+            }
+
+            .info {
+                margin-top: 3em;
+                margin-bottom: 1em;
+                color: $font-color-main;
+                font-weight: lighter;
+            }
+
+            .reviews {
+                color: $font-color-main;
+                text-decoration: underline;
+                font-size: calc(1em - 1px);
+                margin: 1em auto 1.5em 0;
+                
+                @include for_breakpoint(mobile tablet) {
+                    margin: 1em auto 1.5em;
+                }
+
+
+
+                &::before {
+                    content: '\00a0';
+                    width: 6em;
+                    height: 1em;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}

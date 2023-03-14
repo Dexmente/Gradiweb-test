@@ -1,0 +1,38 @@
+// Font Families
+
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap');
+
+@font-face {
+    font-family: 'Filson Pro';
+    font-weight: normal;
+    font-style: normal;
+    src:url('./assets/fonts/filson-pro/FilsonProRegular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Filson Pro';
+    font-weight: bold;
+    font-style: normal;
+    src:url('./assets/fonts/filson-pro/FilsonProBlack.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Filson Pro';
+    font-weight: 100;
+    font-style: normal;
+    src:url('./assets/fonts/filson-pro/FilsonProLight.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Neogrotesk ESS';
+    font-weight: normal;
+    font-style: normal;
+    src:url('./assets/fonts/neogrotesk-ess/neogrotesk-ess-regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Neogrotesk ESS';
+    font-weight: bold;
+    font-style: normal;
+    src:url('./assets/fonts/neogrotesk-ess/neogrotesk-ess-bold.ttf') format('truetype');
+}
+
