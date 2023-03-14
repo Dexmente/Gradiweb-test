@@ -5,7 +5,7 @@ const url = 'https://gradistore-spi.herokuapp.com';
 document.querySelectorAll('footer .columns .column .title').forEach(el => {
     el.addEventListener('click', () => {el.classList.toggle('open')});
 });
-
+// Update Copyright year
 document.querySelector('footer #copyright .year').innerText = new Date().getFullYear();
 
 
@@ -31,5 +31,3 @@ fetch(`${url}/orders`)
     .catch(err => {
         console.warn('Error Fetching Data');
     })
-
-
