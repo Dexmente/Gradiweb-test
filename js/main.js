@@ -12,11 +12,12 @@ document.querySelector('footer #copyright .year').innerText = new Date().getFull
 // Fetch sold products
 fetch(`${url}/orders`)
     .then((response) => {
-        if (response.ok) {
-            return response.json()
-        }        
-        alert('Error fetching data. Please try again')
-        return Promise.reject(response);
+        
+        if (!response.ok) {
+            alert('Error fetching data. Please try again')
+            throw new Error('Network response was not ok');
+          }
+        return response.json();
     })
     .then((data) => {
         const orders = data.orders?.nodes || {};
